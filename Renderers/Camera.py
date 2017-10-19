@@ -20,3 +20,11 @@ def move_left():
     glTranslatef(+GameData.playerSpeed, 0, 0)
 
 
+def move_up():
+    glTranslatef(0, -GameData.playerSpeed, 0)
+
+
+def move_down():
+    glTranslatef(0, GameData.playerSpeed, 0)
+
+

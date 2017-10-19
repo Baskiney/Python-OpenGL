@@ -13,7 +13,7 @@ import pygame
 def init():
         pygame.init()
         pygame.display.set_caption(GameData.titleName)
-        pygame.display.set_icon(pygame.image.load('eufh.jpg'))
+        #pygame.display.set_icon(pygame.image.load('eufh.jpg'))
         GameData.window = pygame.display.set_mode(GameData.resolution, pygame.DOUBLEBUF | pygame.OPENGL)
         pygame.font.init()
         print("Renderer Initiated!")
@@ -32,7 +32,7 @@ def render_loop():
 
         pygame.display.flip()
         GameData.clock.tick(GameData.targetFPS)
-        pygame.display.set_caption(GameData.titleName + "  FPS: "+(str(round(GameData.clock.get_fps(),1))))
+        pygame.display.set_caption(GameData.titleName + "  FPS: "+(str(round(GameData.clock.get_fps(),1)))+ " Mouse: X" + str(GameData.mousePosX) + " Y"+ str(GameData.mousePosY))
 
 
 
